@@ -3,8 +3,6 @@
  */
 
 import React, { useRef, useEffect, useState } from 'react';
-import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
-import { POSE_CONNECTIONS } from '@mediapipe/pose';
 import styles from '../../styles/components/motionTracking/Camera.module.css';
 
 const Camera = ({

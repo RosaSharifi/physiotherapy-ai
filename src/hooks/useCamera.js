@@ -2,7 +2,7 @@
  * Custom hook for managing camera access and video streaming
  */
 
-import { useState, useEffect, useRef } from 'react';
+import {useState, useEffect, useRef, useCallback} from 'react';
 
 const useCamera = () => {
     const videoRef = useRef(null);
@@ -91,16 +91,17 @@ const useCamera = () => {
     /**
      * Switch between front and back cameras (mobile devices)
      */
-    const switchCamera = async () => {
+    const switchCamera = useCallback(async () => {
         // Toggle facing mode
         const newFacingMode = facingMode === 'user' ? 'environment' : 'user';
+        console.log(`Switching camera from ${facingMode} to ${newFacingMode}`);
         setFacingMode(newFacingMode);
 
         // Reinitialize camera with new facing mode
         if (videoRef.current) {
             await initializeCamera(videoRef.current, { facingMode: newFacingMode });
         }
-    };
+    }, [facingMode, initializeCamera]);
 
     /**
      * Take a screenshot of the current camera view

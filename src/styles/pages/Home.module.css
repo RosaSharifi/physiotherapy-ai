@@ -74,6 +74,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s;
+    justify-self: center;
 }
 
 .ctaButton:hover {
@@ -253,13 +254,6 @@
 
     .heroSubtitle {
         font-size: 18px;
-    }
-
-    .ctaButton {
-        width: 100%;
-        justify-content: center;
-        padding: 14px 24px;
-        font-size: 16px;
     }
 
     .featuresSection,
