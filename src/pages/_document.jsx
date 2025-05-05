@@ -5,15 +5,10 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <meta charSet="utf-8" />
-                    <link rel="icon" href="/favicon.ico" />
-                    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-                        rel="stylesheet"
-                    />
-                    <meta name="theme-color" content="#2196F3" />
+                    {/* Load MediaPipe libraries directly from CDN */}
+                    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.1635988162/pose.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1640029074/camera_utils.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1620248257/drawing_utils.js"></script>
                 </Head>
                 <body>
                 <Main />

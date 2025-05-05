@@ -2,9 +2,7 @@
  * Custom hook for MediaPipe Pose detection and landmark processing
  */
 
-import {useState, useEffect, useRef, useCallback} from 'react';
-import * as poseDetection from '@mediapipe/pose';
-import { Camera } from '@mediapipe/camera_utils';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { extractPosePoints } from '../utils/poseUtils';
 
 const usePoseDetection = () => {

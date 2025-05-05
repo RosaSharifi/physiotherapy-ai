@@ -140,7 +140,7 @@ export default function Home() {
                     <div className={styles.benefitCard}>
                         <h3 className={styles.benefitTitle}>Convenience</h3>
                         <p className={styles.benefitDescription}>
-                            Complete your physiotherapy exercises from the comfort of your home on your schedule.
+                            Complete your physiotherapy exercises from the comfort of your bu on your schedule.
                         </p>
                     </div>
 
