@@ -1,0 +1,153 @@
+/* src/styles/components/ExerciseCard.module.css */
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cardLink:hover {
+    transform: translateY(-4px);
+}
+
+.exerciseCard {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.cardLink:hover .exerciseCard {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.exerciseImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardLink:hover .exerciseImage {
+    transform: scale(1.05);
+}
+
+.categoryBadge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cardContent {
+    padding: 16px;
+}
+
+.exerciseName {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.exerciseDescription {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.5;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difficultyBadge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.beginnerDifficulty {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.intermediateDifficulty {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+.advancedDifficulty {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.startButton {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2196f3;
+    transition: color 0.2s;
+}
+
+.cardLink:hover .startButton {
+    color: #0d47a1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exerciseName {
+        font-size: 16px;
+    }
+
+    .exerciseDescription {
+        font-size: 13px;
+        -webkit-line-clamp: 2;
+    }
+
+    .categoryBadge {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .difficultyBadge {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+
+    .startButton {
+        font-size: 12px;
+    }
+}

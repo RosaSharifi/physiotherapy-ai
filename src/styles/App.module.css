@@ -1,0 +1,160 @@
+/* src/styles/App.module.css */
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainNav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.logoLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2196F3;
+}
+
+.navLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.navLink {
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: #2196F3;
+}
+
+.mainContent {
+    flex: 1;
+    background-color: #f8f9fa;
+}
+
+.mainFooter {
+    background-color: #212121;
+    color: white;
+    padding: 32px 16px;
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.footerLink {
+    color: #bdbdbd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footerLink:hover {
+    color: white;
+}
+
+/* Unsupported browser message */
+.unsupportedBrowser {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: #f5f5f5;
+}
+
+.unsupportedContent {
+    max-width: 600px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.unsupportedContent svg {
+    margin-bottom: 24px;
+}
+
+.unsupportedContent h1 {
+    font-size: 28px;
+    color: #d32f2f;
+    margin: 0 0 16px 0;
+}
+
+.unsupportedContent p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #616161;
+    margin: 0 0 16px 0;
+}
+
+.requirementList {
+    text-align: left;
+    background-color: #ffebee;
+    border-radius: 8px;
+    padding: 16px 16px 16px 40px;
+    margin: 16px 0;
+    color: #d32f2f;
+}
+
+.requirementList li {
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navContent {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        text-align: center;
+    }
+}

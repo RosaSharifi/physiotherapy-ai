@@ -1,0 +1,349 @@
+/* src/styles/pages/ExerciseTracker.module.css */
+
+.trackerPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.trackerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.exerciseName {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.exitButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #757575;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.exitButton:hover {
+    color: #d32f2f;
+}
+
+.trackerContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.poseDetectionContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.loadingSpinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #2196f3;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.errorTitle {
+    color: #f44336;
+    font-size: 24px;
+    margin: 0 0 16px 0;
+}
+
+.errorMessage {
+    color: #616161;
+    margin: 0 0 24px 0;
+}
+
+.backButton {
+    padding: 12px 24px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.backButton:hover {
+    background-color: #1976d2;
+}
+
+.instructionsOverlay,
+.completionOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 24px;
+}
+
+.instructionsCard,
+.completionCard {
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+}
+
+.instructionsTitle,
+.completionTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.instructionsContent h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin: 20px 0 8px 0;
+}
+
+.instructionsContent p {
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+    color: #616161;
+}
+
+.keyPointsList {
+    padding-left: 20px;
+    margin: 0 0 24px 0;
+}
+
+.keyPointItem {
+    margin-bottom: 8px;
+    color: #616161;
+}
+
+.startButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 0;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.startButton:hover {
+    background-color: #388e3c;
+}
+
+.completionIcon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.statsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 4px;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.completionButtons {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.tryAgainButton {
+    flex: 1;
+    padding: 12px 0;
+    background-color: #f5f5f5;
+    color: #616161;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tryAgainButton:hover {
+    background-color: #e0e0e0;
+}
+
+.finishButton {
+    flex: 1;
+    padding: 12px 0;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.finishButton:hover {
+    background-color: #1976d2;
+}
+
+.exerciseInfo {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    margin: 24px auto 0;
+    padding: 16px 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.repCounter,
+.phaseIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.repLabel,
+.phaseLabel {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 4px;
+}
+
+.repValue {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2196f3;
+}
+
+.phaseValue {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .trackerHeader {
+        padding: 12px 16px;
+    }
+
+    .exerciseName {
+        font-size: 20px;
+    }
+
+    .trackerContent {
+        padding: 16px;
+    }
+
+    .statsContainer {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .completionButtons {
+        flex-direction: column;
+    }
+
+    .exerciseInfo {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .repCounter,
+    .phaseIndicator {
+        width: 100%;
+    }
+}

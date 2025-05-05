@@ -1,0 +1,303 @@
+/* src/styles/components/ProgressHistory.module.css */
+
+.progressHistoryContainer {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.progressTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 24px 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.statCard {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2196F3;
+    margin-bottom: 8px;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #757575;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 16px 0;
+}
+
+.bestPerformance,
+.recentSessions,
+.progressChart {
+    margin-top: 32px;
+}
+
+.bestPerformanceCard {
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    padding: 16px;
+    border-left: 4px solid #2196F3;
+}
+
+.bestHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bestDate {
+    font-size: 14px;
+    color: #616161;
+}
+
+.bestScore {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2196F3;
+}
+
+.bestMetrics {
+    display: flex;
+    gap: 24px;
+}
+
+.bestMetric {
+    display: flex;
+    gap: 6px;
+}
+
+.metricLabel {
+    font-size: 14px;
+    color: #757575;
+}
+
+.metricValue {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.sessionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sessionCard {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.sessionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sessionDate {
+    font-size: 14px;
+    color: #616161;
+}
+
+.sessionScore {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sessionDetails {
+    display: flex;
+    gap: 24px;
+}
+
+.sessionDetail {
+    display: flex;
+    gap: 6px;
+}
+
+.detailLabel {
+    font-size: 14px;
+    color: #757575;
+}
+
+.detailValue {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+}
+
+.improving {
+    color: #4CAF50;
+}
+
+.declining {
+    color: #F44336;
+}
+
+.stable {
+    color: #FFC107;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+}
+
+.loadingSpinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #2196F3;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.noHistoryContainer {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+}
+
+.noHistoryTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #616161;
+    margin: 0 0 12px 0;
+}
+
+.noHistoryMessage {
+    font-size: 14px;
+    color: #757575;
+    margin: 0;
+}
+
+/* Chart styling */
+.chartContainer {
+    height: 200px;
+    position: relative;
+    margin-top: 16px;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.chartSvg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.gridLine {
+    stroke: #e0e0e0;
+    stroke-width: 1;
+}
+
+.chartLine {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dataPoint {
+    fill: #2196F3;
+    r: 3;
+}
+
+.yAxisLabels {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45px;
+    text-align: right;
+}
+
+.xAxisLabels {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.axisLabel {
+    font-size: 12px;
+    color: #757575;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .progressHistoryContainer {
+        padding: 16px;
+    }
+
+    .progressTitle {
+        font-size: 20px;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bestMetrics,
+    .sessionDetails {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .chartContainer {
+        margin-left: 50px;
+    }
+}

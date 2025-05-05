@@ -1,0 +1,162 @@
+/* src/styles/components/FeaturedExercises.module.css */
+
+.featuredContainer {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.featuredHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.headerText {
+    flex: 1;
+}
+
+.featuredTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0 0 8px 0;
+}
+
+.featuredDescription {
+    font-size: 16px;
+    color: #757575;
+    margin: 0;
+    max-width: 600px;
+}
+
+.viewAllButton {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: #2196F3;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 8px 16px;
+}
+
+.viewAllButton:hover {
+    color: #0D47A1;
+}
+
+.featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.exerciseCard {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.exerciseCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.exerciseImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoryTag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.exerciseInfo {
+    padding: 20px;
+}
+
+.exerciseName {
+    font-size: 20px;
+    font-weight: 600;
+    color: #212121;
+    margin: 0 0 12px 0;
+}
+
+.exerciseDescription {
+    font-size: 14px;
+    color: #757575;
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.exerciseMeta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.difficultyTag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #e3f2fd;
+    color: #2196F3;
+}
+
+.durationTag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #757575;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .featuredHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .featuredTitle {
+        font-size: 24px;
+    }
+
+    .viewAllButton {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .featuredGrid {
+        grid-template-columns: 1fr;
+    }
+}

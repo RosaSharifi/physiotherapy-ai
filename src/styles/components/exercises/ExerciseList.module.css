@@ -1,0 +1,183 @@
+/* src/styles/components/ExerciseList.module.css */
+
+.exerciseListContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.listTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.filtersContainer {
+    margin-bottom: 32px;
+}
+
+.searchContainer {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #2196f3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9e9e9e;
+}
+
+.filterTabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px;
+}
+
+.filterLabel {
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+    margin-bottom: 8px;
+}
+
+.filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filterButton {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filterButton:hover {
+    background-color: #f5f5f5;
+}
+
+.activeFilter {
+    background-color: #2196f3;
+    color: white;
+    border-color: #2196f3;
+}
+
+.activeFilter:hover {
+    background-color: #1976d2;
+}
+
+.exerciseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.exerciseCardWrapper {
+    width: 100%;
+}
+
+.noResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.noResults svg {
+    color: #9e9e9e;
+    margin-bottom: 16px;
+}
+
+.noResults p {
+    font-size: 18px;
+    color: #757575;
+    margin-bottom: 24px;
+}
+
+.resetButton {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.resetButton:hover {
+    background-color: #1976d2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exerciseListContainer {
+        padding: 16px;
+    }
+
+    .listTitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .filterGroup {
+        min-width: 100%;
+    }
+
+    .exerciseGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exerciseGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .searchInput {
+        padding: 10px 16px 10px 40px;
+        font-size: 14px;
+    }
+
+    .filterButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
